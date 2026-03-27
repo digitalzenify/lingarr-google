@@ -21,6 +21,7 @@ Lingarr now offers multiple services for automated translation:
 - **[DeepSeek](https://deepseek.com)**
 - **[Gemini](https://gemini.google.com/)**
 - **[Google](https://translate.google.com/)** 
+- **Google Translate via Tor** — routes all translation requests through the [Tor](https://www.torproject.org/) network (SOCKS5 proxy on `localhost:9050`). Every request is verified to exit via Tor before reaching Google's servers; if Tor is unavailable, translation is aborted rather than falling back to a direct connection. Requires the `tor` sidecar defined in `docker-compose.dev.yml` (or an equivalent Tor proxy accessible on port 9050/9051).
 - **[Bing](https://www.bing.com/translator)**
 - **[Yandex](https://translate.yandex.com/)**
 - **[Azure](https://www.microsoft.com/en-us/translator/business/translator-api/)**

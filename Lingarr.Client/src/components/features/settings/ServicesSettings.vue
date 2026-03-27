@@ -87,6 +87,7 @@ const serviceOptions = [
     { value: SERVICE_TYPE.DEEPSEEK, label: 'DeepSeek' },
     { value: SERVICE_TYPE.GEMINI, label: 'Gemini' },
     { value: SERVICE_TYPE.GOOGLE, label: 'Google' },
+    { value: SERVICE_TYPE.GOOGLE_TOR, label: 'Google Translate via Tor' },
     { value: SERVICE_TYPE.LIBRETRANSLATE, label: 'LibreTranslate' },
     { value: SERVICE_TYPE.LOCALAI, label: 'Local AI (Custom)' },
     { value: SERVICE_TYPE.MICROSOFT, label: 'Microsoft' },
@@ -111,6 +112,7 @@ const serviceConfigComponent = computed(() => {
         case SERVICE_TYPE.DEEPSEEK:
             return DeepSeekConfig
         case SERVICE_TYPE.GOOGLE:
+        case SERVICE_TYPE.GOOGLE_TOR:
         case SERVICE_TYPE.BING:
         case SERVICE_TYPE.MICROSOFT:
         case SERVICE_TYPE.YANDEX:

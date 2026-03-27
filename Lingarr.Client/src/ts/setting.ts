@@ -164,6 +164,7 @@ export const SERVICE_TYPE = {
     GEMINI: 'gemini',
     DEEPSEEK: 'deepseek',
     GOOGLE: 'google',
+    GOOGLE_TOR: 'googletranslatetor',
     BING: 'bing',
     MICROSOFT: 'microsoft',
     YANDEX: 'yandex'

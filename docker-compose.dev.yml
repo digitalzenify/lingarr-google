@@ -175,3 +175,15 @@ services:
 #    tty: true
 #    networks:
 #      - lingarr
+
+  tor:
+    container_name: lingarr-tor
+    image: dperson/torproxy:latest
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:9050:9050"
+      - "127.0.0.1:9051:9051"
+    environment:
+      - TOR_OPTS=--SocksPort 0.0.0.0:9050 --ControlPort 0.0.0.0:9051 --CookieAuthentication 0
+    networks:
+      - lingarr

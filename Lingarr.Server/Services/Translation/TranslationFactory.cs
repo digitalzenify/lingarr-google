@@ -104,6 +104,12 @@ public class TranslationFactory : ITranslationServiceFactory
                 _serviceProvider.GetRequiredService<IRequestTemplateService>()
             ),
 
+            "googletranslatetor" => new GoogleTorService(
+                _serviceProvider.GetRequiredService<ISettingService>(),
+                _serviceProvider.GetRequiredService<ILogger<GoogleTorService>>(),
+                languageCodeService
+            ),
+
             _ => throw new ArgumentException("Unsupported translation service type", nameof(serviceType))
         };
     }
